@@ -18,7 +18,7 @@ public class WafflyApiApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry){
             registry.addMapping("/**")
-                    .allowedOrigins("https://wafflyapp.azurewebsites.net")
+                    .allowedOrigins("*")
                     .allowCredentials(true)
                     .allowedHeaders("Origin","Authorization","Content-Type")
                     .allowedMethods("GET","POST","PUT","DELETE");
