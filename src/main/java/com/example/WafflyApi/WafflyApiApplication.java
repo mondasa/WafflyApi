@@ -5,8 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
+@EnableWebMvc
 public class WafflyApiApplication {
 
 	public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class WafflyApiApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry){
             registry.addMapping("/**")
-                    .allowedOrigins("/**")
+                    .allowedOrigins("https://wafflyapp.azurewebsites.net/")
                     .allowCredentials(true)
                     .allowedHeaders("Origin","Authorization","Content-Type")
                     .allowedMethods("GET","POST","PUT","DELETE");
