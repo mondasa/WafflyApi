@@ -22,7 +22,7 @@ public class WafflyApiApplication {
             registry.addMapping("/**")
                     .allowedOrigins("https://wafflyapp.azurewebsites.net/")
                     .allowCredentials(true)
-                    .allowedHeaders("Origin","Authorization","Content-Type")
+                    .allowedHeaders("*")
                     .allowedMethods("GET","POST","PUT","DELETE");
                     
                     }
